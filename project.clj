@@ -8,10 +8,9 @@
 
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.8.51"]
-                 #_[org.clojure/core.async "0.2.374"
-                  :exclusions [org.clojure/tools.reader]]
                  [cljsjs/react-with-addons "15.1.0-0"]
-                 [cljsjs/react-dom "15.0.0-0"]]
+                 [cljsjs/react-dom "15.1.0-0" :exclusions [[cljsjs/react]]]
+                 ]
 
   :plugins [[lein-figwheel "0.5.3-2"]
             [lein-cljsbuild "1.1.3" :exclusions [[org.clojure/clojure]]]]

@@ -1,2 +1,53 @@
 /* some style */
 
+.example-enter {
+  top: 0px;
+  left: 769px;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.example-enter.example-enter-active {
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  transition: left 300ms ease-out;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.1;
+  transition: opacity 1000ms ease-in;
+}
+
+/*.example-appear {
+  top: 0px;
+  left: 769px;
+}
+
+.example-appear.example-appear-active {
+  top: 0px;
+  left: 0px;
+  transition: top, left 1000ms ease-in;
+}*/
+
+body {
+  margin: 0;
+}
+
+.page {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+}
+
+.page1 {
+  background-color: red;
+}
+
+.page2 {
+  background-color: blue;
+}

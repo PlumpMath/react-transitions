@@ -1,6 +1,7 @@
 (ns react-transitions.core
   (:require [cljsjs.react]
-            [cljsjs.react.dom]))
+            [cljsjs.react.dom])
+  (:require-macros [sablono.core :as sab :refer [html]]))
 
 (enable-console-print!)
 
@@ -14,6 +15,9 @@
 (defmulti page (fn [state] (get-in @state [:ui :page-shown])))
 
 (defmethod page :page-1 [state]
+  (html [:div {:class "page page1" :key "page1"} "PAGE-11111"]))
+
+#_(defmethod page :page-1 [state]
   (.createElement js/React "div"
                   #js {:className "page page1" :key "page1"} "PAGE-1"))
 
@@ -21,7 +25,7 @@
   (.createElement js/React "div"
                   #js {:className "page page2" :key "page2"} "PAGE-2"))
 
-(defn view [state transition-name transistion-timeout]
+(defn app [state transition-name transistion-timeout]
   (.createElement
    js/React js/React.addons.CSSTransitionGroup
    #js {:transitionName transition-name
@@ -34,7 +38,7 @@
 
 (defn render-app [state]
   (.render js/ReactDOM
-           (view state "example" 1000)
+           (app state "example" 1000)
            (.getElementById js/document "app")))
 
 (defn on-js-reload []

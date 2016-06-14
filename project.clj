@@ -10,7 +10,7 @@
                  [org.clojure/clojurescript "1.8.51"]
                  [cljsjs/react-with-addons "15.1.0-0"]
                  [cljsjs/react-dom "15.1.0-0" :exclusions [[cljsjs/react]]]
-                 ]
+                 [sablono "0.7.1"]]
 
   :plugins [[lein-figwheel "0.5.3-2"]
             [lein-cljsbuild "1.1.3" :exclusions [[org.clojure/clojure]]]]

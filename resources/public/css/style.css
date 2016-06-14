@@ -20,7 +20,7 @@
 
 .example-leave.example-leave-active {
   opacity: 0.1;
-  transition: opacity 1000ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 
 /*.example-appear {
